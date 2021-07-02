@@ -23,7 +23,7 @@ if(hour < 10) {
 }else if (hour > 10) {
     $(t1000).addClass("past")
 }else {
-    $(t0900).addClass("present")
+    $(t1000).addClass("present")
 }
 
 if(hour < 11) {
@@ -83,18 +83,84 @@ if(hour < 17) {
 }
 
 //Used to save text content of adjenda even after refresh using local storeage
-var timeSlot1 = $("#timeSlot1");
-var pants = $("container")
+// var timeSlot1 = $("#t0900").value;
+var mainContainer = $(".container")
 
-console.log(timeSlot1);
+// console.log(timeSlot1);
 
-// timeSlot1.on("click",function(event){
-//     event.preventDefault();
-//     localStorage.setItem("note1",item1.value)
-// })
+console.log(document.getElementById("t0900").value)
 
-pants.on("click","#save",function(event){
+mainContainer.on("click","#save1",function(event){
     event.preventDefault();
-    console.log(event.target);
-    // localStorage.setItem("note",item.value)
+        var text1 = document.getElementById("t0900").value;
+        console.log(text1);
+    localStorage.setItem("text1",text1)
+
 });
+mainContainer.on("click","#save2",function(event){
+    event.preventDefault();
+        var text2 = document.getElementById("t1000").value;
+        console.log(text2);
+    localStorage.setItem("text2",text2)
+
+});
+mainContainer.on("click","#save3",function(event){
+    event.preventDefault();
+        var text3 = document.getElementById("t1100").value;
+        console.log(text3);
+    localStorage.setItem("text3",text3)
+
+});
+mainContainer.on("click","#save4",function(event){
+    event.preventDefault();
+        var text4 = document.getElementById("t1200").value;
+        console.log(text4);
+    localStorage.setItem("text4",text4)
+
+});
+mainContainer.on("click","#save5",function(event){
+    event.preventDefault();
+        var text5 = document.getElementById("t1300").value;
+        console.log(text5);
+    localStorage.setItem("text5",text5)
+
+});
+mainContainer.on("click","#save6",function(event){
+    event.preventDefault();
+        var text6 = document.getElementById("t1400").value;
+        console.log(text6
+            );
+    localStorage.setItem("text6",text6)
+
+});
+mainContainer.on("click","#save7",function(event){
+    event.preventDefault();
+        var text7 = document.getElementById("t1500").value;
+        console.log(text7);
+    localStorage.setItem("text7",text7)
+
+});
+mainContainer.on("click","#save8",function(event){
+    event.preventDefault();
+        var text8 = document.getElementById("t1600").value;
+        console.log(text8);
+    localStorage.setItem("text8",text8)
+
+});
+mainContainer.on("click","#save9",function(event){
+    event.preventDefault();
+        var text9 = document.getElementById("t1700").value;
+        console.log(text9);
+    localStorage.setItem("text9",text9)
+
+});
+
+//function to populate text on page if 
+function onStart(){
+    if(document.getElementById("t0900").value){
+    }else {
+    document.getElementById("t0900").value = window.localStorage.getItem('text1');
+    }
+}
+
+onStart();
