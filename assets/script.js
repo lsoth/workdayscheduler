@@ -1,12 +1,14 @@
 //Displays time on top of page
 var time = moment().format('MMMM Do YYYY, h:mm:ss a');
 $("#currentDay").text(time);
-console.log(time)
+console.log(time);
 
-var hour = moment().format("HH")
-console.log(moment().format("HH"))
+var hour = moment().format("HH");
+console.log(moment().format("HH"));
 
 // var t0900 = document.querySelector("#t0900")
+
+//conditionals to update color of text area at given time
 
 if(hour < 9) {
     $(t0900).addClass("future")
@@ -19,7 +21,7 @@ if(hour < 9) {
 if(hour < 10) {
     $(t1000).addClass("future")
 }else if (hour > 10) {
-    $(t0900).addClass("past")
+    $(t1000).addClass("past")
 }else {
     $(t0900).addClass("present")
 }
@@ -81,3 +83,18 @@ if(hour < 17) {
 }
 
 //Used to save text content of adjenda even after refresh using local storeage
+var timeSlot1 = $("#timeSlot1");
+var pants = $("container")
+
+console.log(timeSlot1);
+
+// timeSlot1.on("click",function(event){
+//     event.preventDefault();
+//     localStorage.setItem("note1",item1.value)
+// })
+
+pants.on("click","#save",function(event){
+    event.preventDefault();
+    console.log(event.target);
+    // localStorage.setItem("note",item.value)
+});
