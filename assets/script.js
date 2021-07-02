@@ -82,7 +82,7 @@ if(hour < 17) {
     $(t1700).addClass("present")
 }
 
-//Used to save text content of adjenda even after refresh using local storeage
+//Used to save text content of agenda even after refresh using local storeage
 // var timeSlot1 = $("#t0900").value;
 var mainContainer = $(".container")
 
@@ -155,11 +155,44 @@ mainContainer.on("click","#save9",function(event){
 
 });
 
-//function to populate text on page if 
+//function to populate text on page if there is anything saved in local storage
+
 function onStart(){
     if(document.getElementById("t0900").value){
     }else {
     document.getElementById("t0900").value = window.localStorage.getItem('text1');
+    };
+    if(document.getElementById("t1000").value){
+    }else {
+    document.getElementById("t1000").value = window.localStorage.getItem('text2');
+    };
+    if(document.getElementById("t1100").value){
+    }else {
+    document.getElementById("t1100").value = window.localStorage.getItem('text3');
+    };
+    if(document.getElementById("t1200").value){
+    }else {
+    document.getElementById("t1200").value = window.localStorage.getItem('text4');
+    };
+    if(document.getElementById("t1300").value){
+    }else {
+    document.getElementById("t1300").value = window.localStorage.getItem('text5');
+    };
+    if(document.getElementById("t1400").value){
+    }else {
+    document.getElementById("t1400").value = window.localStorage.getItem('text6');
+    };
+    if(document.getElementById("t1500").value){
+    }else {
+    document.getElementById("t1500").value = window.localStorage.getItem('text7');
+    };
+    if(document.getElementById("t1600").value){
+    }else {
+    document.getElementById("t1600").value = window.localStorage.getItem('text8');
+    };
+    if(document.getElementById("t1700").value){
+    }else {
+    document.getElementById("t1700").value = window.localStorage.getItem('text9');
     }
 }
 
